@@ -3,6 +3,8 @@
 
 将2份文件放置php环境同一路径，xxx/epg.php?ch=CCTV5+&date=2026-09-29  ,缓存2小时，channel_map.txt自定义频道名称和指定epg来源
 
+debug测试 xxx/epg.php?ch=CCTV5+&debug=1
+
 php部署在国内环境，将epg.php里xml来源换成gitee的 ,参考https://github.com/taksssss/tv/
 
 diyp epg格式如下
