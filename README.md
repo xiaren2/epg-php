@@ -1,9 +1,9 @@
 # epg-php
 将xml转换成diyp使用的节目单格式
 
-将2份文件放置php环境同一路径，xxx/epg.php?ch=CCTV5+&date=2026-09-29
+将2份文件放置php环境同一路径，xxx/epg.php?ch=CCTV5+&date=2026-09-29  ,缓存2小时，channel_map.txt自定义频道名称和指定epg来源
 
-
+diyp epg格式如下
 
     "date": "20260929",
     "channel_name": "CCTV5+",
