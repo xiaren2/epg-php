@@ -6,7 +6,7 @@ header('Content-Type: application/json; charset=utf-8');
 $epgSources = [
     'https://raw.githubusercontent.com/taksssss/tv/refs/heads/main/epg/112114.xml.gz',
     'https://raw.githubusercontent.com/taksssss/tv/refs/heads/main/epg/51zmt.xml.gz',
-    'https://raw.githubusercontent.com/kuke31/xmlgz/main/all.xml.gz',
+    'https://raw.githubusercontent.com/taksssss/tv/refs/heads/main/epg/erw.xml.gz',
     'https://raw.githubusercontent.com/taksssss/tv/refs/heads/main/epg/epgpw_cn.xml.gz',
 ];
 
