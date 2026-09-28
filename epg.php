@@ -321,10 +321,12 @@ foreach ($epgSources as $idx => $url) {
 
         if ($progDate !== $targetDay) continue;
 
+        $desc = isset($p->desc) ? trim((string)$p->desc) : '';
         $tempList[] = [
             'title' => trim((string)$p->title),
             'start' => substr($startRaw, 8, 2) . ':' . substr($startRaw, 10, 2),
-            'end'   => substr((string)$p['stop'], 8, 2) . ':' . substr((string)$p['stop'], 10, 2)
+            'end'   => substr((string)$p['stop'], 8, 2) . ':' . substr((string)$p['stop'], 10, 2),
+            'desc'  => $desc
         ];
     }
     if ($debug) {
@@ -333,7 +335,9 @@ foreach ($epgSources as $idx => $url) {
 
     if (!empty($tempList)) {
         $epgData = $tempList;
-        $usedSrc = $url;
+        // source 只保留文件名，精简输出
+        $usedSrc = basename(parse_url($url, PHP_URL_PATH));
+        $usedSrc = preg_replace('/\.xml(\.gz)?$/', '', $usedSrc);
         break;
     }
 }
