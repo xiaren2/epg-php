@@ -4,13 +4,13 @@ header('Content-Type: application/json; charset=utf-8');
 /* ================= 配置 ================= */
 // 多个 EPG 源，按顺序尝试。注意：URL 不要带反引号 `
 $epgSources = [
+    'https://raw.githubusercontent.com/taksssss/tv/refs/heads/main/epg/51zmte1.xml.gz',
     'https://raw.githubusercontent.com/taksssss/tv/refs/heads/main/epg/112114.xml.gz',
-    'https://raw.githubusercontent.com/taksssss/tv/refs/heads/main/epg/51zmt.xml.gz',
     'https://raw.githubusercontent.com/taksssss/tv/refs/heads/main/epg/erw.xml.gz',
     'https://raw.githubusercontent.com/taksssss/tv/refs/heads/main/epg/epgpw_cn.xml.gz',
 ];
 
-$cacheTtl = 6 * 3600;
+$cacheTtl = 2 * 3600;
 $baseDir  = __DIR__;
 $cacheDir = $baseDir . '/caches';
 $mapFile  = $baseDir . '/channel_map.txt'; // 频道名映射文件（可选）
